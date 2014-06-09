@@ -29,12 +29,19 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+            <input type="button" onclick="cli()">
             </div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+
+function cli(){
+
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+}
+
         </script>
     </body>
 </html>
