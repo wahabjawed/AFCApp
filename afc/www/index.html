@@ -36,7 +36,7 @@
     <video id="MY_VIDEO_1" class="ad video-js vjs-default-skin" controls
  preload="auto" width="100%" height="280" 
  data-setup="{}">
-      <source id="ss" src="img/video.mp4" type='video/mp4'>
+      <source id="ss" src="/android_asset/www/img/video.mp4" type='video/mp4'>
     </video>
   </center>
 </div>
@@ -48,7 +48,7 @@
     <h2 class="form-heading">APC</h2>
     </center>
     <div class="control-container">
-      <button class="btn btn-lg btn-info btn-block btn-width" id="btnMobileApp" type="button" onclick="mobileApp()">Mobile App</button><br>
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnMobileApp" type="button" >Mobile App</button><br>
       <button class="btn btn-lg btn-info btn-block btn-width" id="btnFbOne" type="button" >APC</button>
       <br>
       <button class="btn btn-lg btn-info btn-block btn-width" id="btnFbTwo" type="button"> APC Youth North America</button>
@@ -88,8 +88,9 @@
 			 alert($('#ss').attr('src'));
  
            if (device.platform == 'Android') {
+			   alert('gg');
               
-				$('#ss').attr('src',"/android_asset/www/img/video.mp4");
+				$('#ss').attr("src","/android_asset/www/img/video.mp4");
             }
 			 alert($('#ss').attr('src'));
 			
