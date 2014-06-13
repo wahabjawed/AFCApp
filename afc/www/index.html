@@ -36,7 +36,7 @@
     <video id="MY_VIDEO_1" class="ad video-js vjs-default-skin" controls
  preload="auto" width="100%" height="280" 
  data-setup="{}">
-      <source id="ss" src="/android_asset/www/img/video.mp4" type='video/mp4'>
+      <source src="http://silversagesstudio.com/video.mp4" type='video/mp4' />
     </video>
   </center>
 </div>
@@ -85,14 +85,7 @@
 			});
 			
 			
-			 alert($('#ss').attr('src'));
- 
-           if (device.platform == 'Android') {
-			   alert('gg');
-              
-				$('#ss').attr("src","/android_asset/www/img/video.mp4");
-            }
-			 alert($('#ss').attr('src'));
+			
 			
         });
 
