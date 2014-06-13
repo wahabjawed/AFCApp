@@ -36,7 +36,7 @@
     <video id="MY_VIDEO_1" class="ad video-js vjs-default-skin" controls
  preload="auto" width="100%" height="280" poster="MY_VIDEO_POSTER.jpg"
  data-setup="{}">
-      <source src="/android_asset/www/img/VIDEO.mov" type='video/mov'>
+      <source id="ss" src="img/video.mp4" type='video/mp4'>
     </video>
   </center>
 </div>
@@ -60,12 +60,23 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
             app.initialize();
-
-
+ 
         $(document).ready(function () {
+			
+			
+ alert($('#ss').attr('src'));
+ 
+           if (device.platform == 'Android') {
+              
+				$('#ss').attr('src',"/android_asset/www/img/video.mp4");
+            }
+			alert($('#ss').attr('src'));
+
+
             $('.close').click(function () {
                 $('.lightbox').fadeOut('slow');
             });
+			
             $('#btnMobileApp').click(function () {
 				
 				var ref = window.open('http://mobile.dudamobile.com/site/apc_1apc?url=http%3A%2F%2Fapc.com.ng%2F#2634', '_blank', 'location=no');
