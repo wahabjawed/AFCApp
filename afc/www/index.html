@@ -64,15 +64,6 @@
         $(document).ready(function () {
 			
 			
- alert($('#ss').attr('src'));
- 
-           if (device.platform == 'Android') {
-              
-				$('#ss').attr('src',"/android_asset/www/img/video.mp4");
-            }
-			alert($('#ss').attr('src'));
-
-
             $('.close').click(function () {
                 $('.lightbox').fadeOut('slow');
             });
@@ -92,6 +83,15 @@
 			var ref = window.open('https://m.facebook.com/profile.php?id=1425841740973785', '_self', 'location=no');  
             
 			});
+			
+			
+			 alert($('#ss').attr('src'));
+ 
+           if (device.platform == 'Android') {
+              
+				$('#ss').attr('src',"/android_asset/www/img/video.mp4");
+            }
+			alert($('#ss').attr('src'));
 			
         });
 
