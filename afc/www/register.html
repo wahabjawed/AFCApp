@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="css\bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+<div class="jumbotron" style="margin:15px">
+  <center>
+  <img src="img/top.png" class="img-responsive">
+  <h2 class="form-heading">Register For Newsletter</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="emailID" placeholder="Enter email">
+    </div>
+    <button type="button" class="btn btn-default" id="btnRegister" onclick="register()">Submit</button>
+  </form>
+</div>
+</center>
+</body>
+<script type="text/javascript">
+
+  function register(){
+	
+	var _emailID=$('#emailID').val();
+if(_emailID!=""){
+			$.ajax({
+  			url: "http://fajjemobile.info/korkster.com/afcInsert.php",
+				type: "POST",
+				data: {emailID:_emailID},
+				   success:function(response){
+                  
+                    alert(response);
+					
+                },
+                error: function (request, status, error) {
+                    alert("Error, Connect to network");
+                } 
+});
+}else{
+	alert("Kindly provide your email");
+	}
+               
+  }
+</script>
+</html>
